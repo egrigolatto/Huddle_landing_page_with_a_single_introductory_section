@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --fuente1:'Poppins', sans-serif;
+    --fuente2:'Open Sans', sans-serif;
+
+    --Violet: hsl(257, 40%, 49%);
+    --SoftMagenta: hsl(300, 69%, 71%);
+}
+
+body{
+    font-size: 16px;
+    background-image: url(images/bg-desktop.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: var(--Violet);
+    height: 100vh;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+.columna__uno,
+.columna__dos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.columna__uno img:first-of-type{
+    width: 180px;
+    margin-bottom: 80px;
+
+}
+.columna__uno img:last-of-type{
+    width: 100%;
+}
+.columna__dos{
+    padding-left: 50px;
+    position: relative;
+}
+.columna__dos h1{
+    font-family: var(--fuente1);
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.columna__dos p{
+    color: #fff;
+    font-family: var(--fuente2);
+    line-height: 1.5;
+    margin-bottom: 15px;
+    width: 85%;
+}
+.columna__dos button{
+    width: 180px;
+    color: var(--Violet);
+    padding: 12px 30px;
+    border-radius: 40px;
+    font-family: var(--fuente2);
+    border: none;
+    font-weight: 400;
+    font-size: 1em;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+.columna__dos button:hover{
+    background-color: var(--SoftMagenta);
+    color: #fff;
+}
+.columna__dos div{
+    position: absolute;
+    bottom: -50px;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.columna__dos div a{
+    text-decoration: none;
+    color: #fff;
+    margin-left: 20px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    padding: 10px;
+    width: 15px;
+    height: 15px;
+}
+
+@media (max-width:1024px){
+    body{
+        background-image: url(images/bg-mobile.svg);
+    }
+    main{
+        grid-template-columns: 1fr;
+    }
+    .columna__uno{
+        margin-bottom: 80px;
+    }
+    .columna__dos{
+        align-items: center;
+        margin-bottom: 100px;
+    }
+    .columna__dos h1,
+    .columna__dos p{
+        text-align: center;
+    }
+    .columna__dos p{
+        margin-bottom: 30px;
+    }
+    .columna__dos button{
+        margin-bottom: 100px;
+        width: 70%;
+    }
+    .columna__dos div{
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+
+}
